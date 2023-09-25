@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>JS-1 By GUDLA NISHIKA</title>
+    <style>
+        #result{
+            color: rgb(150, 20, 20)
+        }
+        #reverseButton{
+            background-color: rgb(255, 0, 0);
+            color:rgb(255, 255, 255)
+        }
+    </style>
+    <script>
+        function reverseNumber() {
+            let x = document.getElementById("numberInput").value;
+            let numStr = x.toString();
+            let reversedStr = numStr.split('').reverse().join('');
+            let reversedNum = parseInt(reversedStr);
+            document.getElementById("result").innerHTML = "Yay, thanks for trying Nishika's reverse calculator. This is the output for the number you entered: " + reversedNum;
+        }
+    </script>
+    <h1>JS-1 By GUDLA NISHIKA - 21BCE8562</h1>
+    <h3>REVERSE OF NUMBER</h3>
+</head>
+<body>
+    <p>Enter a number:</p>
+    <input type="text" id="numberInput" placeholder="Number please">
+    <button type="button" id="reverseButton" onclick="reverseNumber()">Click here!!</button>
+    <p id="result"></p>
+</body>
+</html>
+
+

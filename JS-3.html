@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS-3 By GUDLA NISHIKA</title>
+    <style>
+        #multiply {
+            background-color: green;
+            color: white;
+        }
+        #divide {
+            background-color: red;
+            color: white;
+        }
+        #num1 {
+            background-color: rgb(190, 250, 190);
+        }
+        #num2 {
+            background-color: rgb(243, 170, 194);
+        }
+        #result {
+            color: blue;
+        }
+    </style>
+    <h1>JS-3 By GUDLA NISHIKA - 21BCE8562</h1>
+    <h3>MULTIPLICATION and DIVISION</h3>
+</head>
+<body style="margin: 30px">
+    <form>
+        1st Number: <input type="text" id="num1" /><br><br>
+        2nd Number: <input type="text" id="num2" /><br><br>
+        <input type="button" onClick="multiplyBy()" id="multiply" value="Multiply" />
+        <input type="button" onClick="divideBy()" id="divide" value="Divide" />
+    </form>
+    <p>Thank you (21BCE8562),
+        <span id="result"></span>
+    </p>
+    <script>
+        function multiplyBy() {
+            num1 = parseFloat(document.getElementById("num1").value); 
+            num2 = parseFloat(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = "Result of Multiplication: " + (num1 * num2);
+        }
+        function divideBy() {
+            num1 = parseFloat(document.getElementById("num1").value); 
+            num2 = parseFloat(document.getElementById("num2").value);
+            if (num2 !== 0) {
+                document.getElementById("result").innerHTML = "Result of Division: " + (num1 / num2);
+            } else {
+                document.getElementById("result").innerHTML = "Cannot divide by zero";
+            }
+        }
+    </script>
+</body>
+</html>

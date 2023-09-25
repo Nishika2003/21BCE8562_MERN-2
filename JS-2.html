@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS-2 By GUDLA NISHIKA</title>
+    <style>
+        #sortedResult {
+            color: green; 
+        }
+        button {
+            background-color: green; 
+            color: white; 
+        }
+    </style>
+    <script>
+        function sortStringAlphabetically(inputString) {
+            var charArray = inputString.split('');
+            charArray.sort();
+            var sortedString = charArray.join('');
+            return sortedString;
+        }
+        function sortAndDisplay() {
+            var inputString = document.getElementById('inputString').value;
+            var sortedResult = sortStringAlphabetically(inputString);
+            document.getElementById('sortedResult').textContent = "Thanks for trying Nishika's String Sorter. The output is: " + sortedResult;
+        }
+    </script>
+</head>
+<body>
+    <h1>JS-2 By GUDLA NISHIKA - 21BCE8562</h1>
+    <h3>STRING SORTER</h3>
+    <label for="inputString">Enter a string:</label>
+    <input type="text" id="inputString" placeholder="String please">
+    <button onclick="sortAndDisplay()">Sort</button>
+    <p id="sortedResult"></p>
+</body>
+</html>

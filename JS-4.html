@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS-4 By GUDLA NISHIKA</title>
+    <style>
+        #date {
+            background-color: paleturquoise;
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        #time {
+            background-color: PaleVioletRed;
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .output {
+            color: green;
+        }
+    </style>
+    <script>
+        function showDate() {
+            const currentDate = new Date();
+            const date1 = currentDate.toLocaleDateString();
+            document.getElementById("dateOutput").innerHTML = `Date: ${date1}`;
+        }
+        function showTime() {
+             const currentDate = new Date();
+             const timeOptions = {
+               weekday: 'long',
+               hour: 'numeric',
+               minute: 'numeric',
+               second: 'numeric',
+               timeZoneName: 'short',
+        };
+             const time1 = currentDate.toLocaleString('en-US', timeOptions);
+             document.getElementById("timeOutput").innerHTML = `Time: ${time1}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>JS-4 By GUDLA NISHIKA - 21BCE8562</h1>
+    <h3>DATE AND TIME</h3>
+    <button id="date" onclick="showDate()">Date Today</button>
+    <p class="output" id="dateOutput"></p>
+    <button id="time" onclick="showTime()">Time Now</button>
+    <p class="output" id="timeOutput"></p>
+</body>
+</html>

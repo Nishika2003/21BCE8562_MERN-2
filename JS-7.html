@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <title>JS-7 By GUDLA NISHIKA</title>
+  <h1>JS-7 By GUDLA NISHIKA - 21BCE8562</h1>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation: mymove 4s infinite;
+  animation-play-state: paused;
+}
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 80%;}
+}
+button {
+    margin-bottom: 20px;
+}
+
+</style>
+</head>
+<body>
+<script>
+function myStartFunction() {
+  document.getElementById("train").style.animationPlayState = "running";
+}
+function myStopFunction() {
+  document.getElementById("train").style.animationPlayState = "paused";
+}
+</script>
+<h1>Handle animations with these buttons</h1>
+<button onclick="myStartFunction()">Start</button>
+<button onclick="myStopFunction()">Stop</button>
+<div id="train"><img id="animated-train" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8pA5FSssgdWTqsclwvIacojjFW9GRLDE6Lg&usqp=CAU"></div>
+</body>
+</html>
